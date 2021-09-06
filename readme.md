@@ -103,5 +103,19 @@ $ pip freeze > requirements-dev.txt
         $ git add .
         $ git commit -m "****"
         $ git push heroku main
-       ``` 
+       ```
+    1. migrate
+       ```bash
+         $ heroku run python3 manage.py migrate
+         $ heroku run python3 manage.py createsuperuser
+               Running python3 manage.py createsuperuser on ⬢ nextjs-tasklist-api... up, run.2009 (Free)
+               Username (leave blank to use 'u47412'): admin
+               Email address:
+               Password:
+               Password (again):
+               This password is too short. It must contain at least 8 characters.
+               This password is too common.
+               Bypass password validation and create user anyway? [y/N]: y
+               Superuser created successfully.
+       ```  
   
